@@ -18,6 +18,7 @@ require("./config/passport")(passport);
 //Connect To Database
 connectDB();
 
+app.set("trust proxy", true);
 //Using EJS for views
 app.set("view engine", "ejs");
 app.use(cors())
