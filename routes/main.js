@@ -12,10 +12,7 @@ function getUserFromWherever(req, res, next){
         next()
     }).catch(next)
 }
-router.get('/', getUserFromWherever, (req, res) => {
-    res.send(req.user?.toObject() || {})
-})
-router.post('/', getUserFromWherever, (req, res) => {
+router.get('/self', getUserFromWherever, (req, res) => {
     res.send(req.user?.toObject() || {})
 })
 

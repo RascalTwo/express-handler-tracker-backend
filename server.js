@@ -28,6 +28,8 @@ app.use(express.json({ limit: '5mb' }));
 //Logging
 app.use(logger("dev"));
 
+app.use(express.static('./express-handler-tracker/public'));
+
 // Setup Sessions - stored in MongoDB
 app.use(
   session({
